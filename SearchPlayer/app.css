@@ -15,8 +15,7 @@
   }
 
   .search {
-      
-      color: #6fbef3;
+    color: #6fbef3;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
@@ -29,57 +28,6 @@
    
   }
   
-  /* Add a color to the active/current link */
-  
-
-
-
-/* Dropdown Button */
-
-
-.dropbtn {
-    background-color: #131b24;
-    
-    color: #6fbef3;
-    text-align: center;
-   
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    width: 400px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    columns: 2;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: #6fbef3;
-    padding: 8px 12px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  /* .dropdown-content a:hover {background-color: #ddd;} */
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: rgba(82, 155, 255, 0.5);}
 
   * {
     -webkit-box-sizing: border-box;
@@ -355,6 +303,8 @@ a.pure-button-primary {
     }
 
 }
+
+
 /* Player Search Page */
 #players-list {
     list-style: none;

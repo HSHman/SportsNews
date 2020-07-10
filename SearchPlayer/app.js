@@ -1,10 +1,11 @@
-
+// Building the URL
 
 function buildQueryURL() {
   var player = $("#playerSearch").val().trim();
   var queryURL = "https://www.balldontlie.io/api/v1/players?search=" + player;
 
   // Creates AJAX call for the specific name
+
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -12,7 +13,11 @@ function buildQueryURL() {
     console.log(response)
     console.log(queryURL)
 
+    // For loop to dynamically display results
+
     for (var i = 0; i < response.data.length; i++) {
+
+      // Logging traversed JSON results
 
       console.log(response.data[i].first_name)
       console.log(response.data[i].last_name)
@@ -21,211 +26,102 @@ function buildQueryURL() {
       console.log(response.data[i].height_feet + "'" + response.data[0].height_inches)
       console.log(response.data[i].weight_pounds)
 
+      // Creating list element
+
       var item = $("<li>");
 
       item.addClass("toggleName")
-      // Adding a data-attribute
-      item.attr("data-name", response.data[i].first_name);
-      // Providing the initial button text
+
       item.text(response.data[i].first_name + " " + response.data[i].last_name);
-      // Adding the li to the HTML
+
       $("#players-list").append(item);
-      // creating Div
+
+      // Creating Div
+
       var newDiv = $("<div>");
+
       newDiv.addClass("playerDetails");
+
       newDiv.attr("style", "display: none;");
+
+      // Creating img tag and applying attributes
+
       var image = $("<img>").attr("src", "imgassets/imgplaceholder.png");
+
       image.attr("style", "height: 100px; width: 100px; margin: 5px;")
+
       newDiv.append(image)
+
+      // Making  a new Div with h4 and p tags
+
       var anotherDiv = $("<div>");
+
       var teamName = $("<h4>").attr("id", "teamName")
+
       var position = $("<p>").attr("id", "position")
-      var height =  $("<p>").attr("id", "heightAndWeight")
+
+      var height = $("<p>").attr("id", "heightAndWeight")
+
+      // Appending the elements to the div's
+
       anotherDiv.append(teamName, position, height)
+
       newDiv.append(anotherDiv)
+
+      // Displaying results from API
+
       $(teamName).text(response.data[i].team.full_name)
+
       $(position).text(response.data[i].position)
+
       $(height).text(response.data[i].height_feet + "'" + response.data[0].height_inches + "/" + response.data[i].weight_pounds + "lbs")
+
+      // Adding the event listener to the li's
+
       $(item).on('click', function () {
+
         console.log("onclick")
+
         $(this).next().slideToggle(150);
       });
+
+      // Appending the div to the html
+
       $("#players-list").append(newDiv)
     }
-    
-    
+
+
 
   }
-
-
-    //       var $articleList = $("<ul>");
-    //              $articleList.addClass("list-group");
-
-    //         //  Add the newly created element to the DOM
-    //    $("#article-section").append($articleList);
-
-
-    //     for (var i = 0; i < player; i++) {
-
-
-
-    //         // Create the  list group to contain the articles and add the article content for each
-    //         var $articleList = $("<ul>");
-    //         $articleList.addClass("list-group");
-
-    //         // Add the newly created element to the DOM
-    //         $("#article-section").append($articleList);
-    //     var firstName = response.data[""].first_name
-    //  var lastName = response.data[""].last_name
-    // console.log(firstName)
-    // console.log(lastName)
-
-
-    //         // If the article has a name, log and append to $articleList
-    //         var playerName = firstName + " " + lastName;
-    //         var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-
-    //         if (playerName) {
-    //           console.log(playerName);
-    //           $articleListItem.append(
-    //             "<span class='label label-primary'>" +
-    //               articleCount +
-    //               "</span>" +
-    //               "<strong> " +
-    //               headline.main +
-    //               "</strong>"
-    //           );
-    //         }
-    //       }
-
-    //   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //       // Loop through and build elements for the defined number of articles
-    //       for (var i = 0; i < re; i++) {
-    //         // Get specific article info for current index
-    //         var article = ballDontLieData.response.docs[i];
-
-    //         // Increase the articleCount (track article # - starting at 1)
-    //         var articleCount = i + 1;
-
-    //         // Create the  list group to contain the articles and add the article content for each
-    //         var $articleList = $("<ul>");
-    //         $articleList.addClass("list-group");
-
-    //         // Add the newly created element to the DOM
-    //         $("#article-section").append($articleList);
-    //     var firstName = response.data[article].first_name
-    //  var lastName = response.data[article].last_name
-    // console.log(firstName)
-    // console.log(lastName)
-
-
-    //         // If the article has a name, log and append to $articleList
-    //         var playerName = firstName + " " + lastName;
-    //         var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-
-    //         if (playerName) {
-    //           console.log(playerName);
-    //           $articleListItem.append(
-    //             "<span class='label label-primary'>" +
-    //               articleCount +
-    //               "</span>" +
-    //               "<strong> " +
-    //               headline.main +
-    //               "</strong>"
-    //           );
-    //         }
-    //       }
-
-
-    // // })
 
 
   )
 }
 
-//  function updatePage(response) {
-
-
-//         // Loop through and build elements for the results
-//       for (var i = 0; i < response; i++) {
-
-//         // Increase the articleCount (track article # - starting at 1)
-
-
-//         // Create the  list group to contain the articles and add the article content for each
-//         // var $articleList = $("<ul>");
-//         // $articleList.addClass("list-group");
-
-//         // Add the newly created element to the DOM
-// //         $("#article-section").append($articleList);
-// //     var firstName = response.data[i].first_name
-// //  var lastName = response.data[i].last_name
-
-//  var a = $("<ul>");
-//  a.attr("href", "#")
-//  a.addClass("list-group PlayerName")
-//  a.attr("data-number", [i])
-//  a.text(response[i])
-//  $("#article-section").append(a); 
-
-
-//       }
-
-
-
-//  }  
+// Creating the function to clear input
 
 function clear() {
   $("#playerSearch").val("");
 }
 
+
+// Adding the event listener to the Search button
+
 $("#run-search").on("click", function (event) {
 
   event.preventDefault();
 
+  // Remove any existing results
+  $("li").remove();
+
   // Build the query URL for the ajax request to the  API
   buildQueryURL();
-
-
-
-
-
 
   // Empty the region associated with the input
   clear();
 
-  // return window.location.assign(href='playerSearch.html')
-
-
-
-
-
 });
 
 
-// (function () {
 
-//   // $('dd').filter(':nth-child(n+4)').addClass('hide');
-
-//   // $('.toggleName').on('click', function () {
-//   //   console.log("onclick")
-//   //   $(this).next().slideToggle(150);
-//   // });
-
-// })();
 
