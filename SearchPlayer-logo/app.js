@@ -286,9 +286,9 @@ function clear() {
 // Adding the event listener to the Search button
 
 $("#run-search").on("click", function (event) {
-
   event.preventDefault();
-
+  
+  $(".playerDetails").remove();
   // Remove any existing results
   $("li").remove();
 
