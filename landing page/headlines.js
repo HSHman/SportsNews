@@ -1,23 +1,24 @@
 
+// Added by Sheldon-Start *****
+
 $(document).ready(function()
 {
-  // Change the ID to the team search Submit button.
-  $("#run-search").on("click", function(event) 
-  {
-    //Prevents the page from reloading on submit.
-    event.preventDefault();
+  // loadHeadlines();
+});
   
+function loadHeadlines()
+{    
     // Empty the region associated with the 2 articles
     clear();   
     var queryURL = buildQueryURL();
   
     // Here is the AJAX request to the API 
-    $.ajax({
+    $.ajax(
+    {
       url: queryURL,
       method: "GET"
     }).then(showArticles);
-  });
-});
+}
 
 //build the query URL for NYT API 
 function buildQueryURL() 
@@ -42,15 +43,15 @@ function buildQueryURL()
 // Function shows API query data on the webpage
 function showArticles(NYTData) 
 {    
-  var numArticles = 2; // number of articles to display
+  var numArticles = 4; // number of articles to display
    
   for (var i = 0; i < numArticles; i++) // Loop and build elements for the defined number of articles
-  {    
+  {   
     var article = NYTData.response.docs[i];  // Get article info one by one
     
     var $articleList = $("<ul>").addClass("list-group"); // Create the list group and add class
     
-    $("#article-section").append($articleList); // Add the new element to the DOM
+    $("#headline-section").append($articleList); // Add the new element to the DOM
 
     // If the article has a headline, log and append to $articleList
     var headline = article.headline;
@@ -92,9 +93,7 @@ function showArticles(NYTData)
 }
 
 // Function to clear the articles
-function clear() {
-  $("#article-section").empty();
+function clear() 
+{
+  $("#headline-section").empty();
 }
-
-//  .on("click") function associated with the clear button
-$("#clear-all").on("click", clear);
