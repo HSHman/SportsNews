@@ -1,7 +1,7 @@
 # This is Project-1
 
 ## Screenshot of completed application
-[Sports News Screenshot](SportsNews/Assets/SN-screeenshot.png)
+![Sports News Screenshot](SportsNews/Assets/SN-screeenshot.png)
 
 ## Website URL
 
