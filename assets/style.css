@@ -17,14 +17,12 @@ body {
 h1,
 h2,
 h3,
+h4,
 h5,
 h6,
 label {
     color: #34495e;
-}
-
-h4 {
-    color: white;
+    letter-spacing: .75px;
 }
 
 .pure-img-responsive {
@@ -50,60 +48,14 @@ h4 {
 }
 
 
-
-/*
- * -- PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-.pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 100%;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-/*
- * -- PURE BUTTON STYLES --
- * I want my pure-button elements to look a little different
-*/
-
-.pure-button {
-    background-color: #1f8dd6;
-    color: white;
-    padding: 0.5em 2em;
-    border-radius: 5px;
-}
-
-a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
-    border-radius: 5px;
-    font-size: 120%;
-}
-
-
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
-*/
+ */
 
 .header {
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
-}
-
-.pure-menu-link {
-    display: flex;
-    justify-content: end;
-    font-size: 30px;
-    padding: 15%;
 }
 
 .pure-menu-heading img{
@@ -116,9 +68,14 @@ a.pure-button-primary {
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
     height: 70px;
-    background: #06090a;
-}
+    
 
+
+}
+.home-menu {
+    background: #06090a;
+    
+}
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
@@ -138,7 +95,7 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: white;
+    color: #6FBEF3;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -155,7 +112,7 @@ a.pure-button-primary {
 /*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
-*/
+ */
 
 .splash-container {
     background: #1f8dd6;
@@ -190,6 +147,7 @@ a.pure-button-primary {
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+    letter-spacing: 1rem;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -197,13 +155,13 @@ a.pure-button-primary {
     color: white;
     letter-spacing: 0.05em;
     opacity: 0.8;
+    font-weight: 400;
 }
 
 /*
  * -- CONTENT STYLES --
  * This represents the content area (everything below the blue section)
-*/
-
+ */
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
@@ -213,6 +171,10 @@ a.pure-button-primary {
     z-index: 2;
     background: white;
 
+}
+
+.posts {
+    display: flex;
 }
 
 /* We want to give the content area some more padding */
@@ -311,15 +273,4 @@ a.pure-button-primary {
         font-size: 300%;
     }
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+

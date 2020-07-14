@@ -49,46 +49,57 @@ function showArticles(NYTData)
   {   
     var article = NYTData.response.docs[i];  // Get article info one by one
     
-    var $articleList = $("<ul>").addClass("list-group"); // Create the list group and add class
+    // **** Create the elements and add classes ************
+    var sectionEl = $("<section class='post' style='width: 25%'>"); // Create the section and add class
+    var headerEl = $("<header class='post-header'>"); // Create the header and add class
+    var h2El = $("<h3 class='post-title' style='color: #1f8dd6'>"); // Create the h2 and add class for headline
+    var link = $("<a href='webUrl'>")
+    h2El.append(link)
+    var p1El = $("<p class='post-meta'>"); // Create the p and add class for byline (author name)
+    var divEl = $("<div class='post-description'>"); // Create the div and add class for article details
+    var p2El = $("<p>"); // Create the p and add class for publication date
+    var p3El = $("<p>"); // Create the p and add class for lead paragraph
     
-    $("#headline-section").append($articleList); // Add the new element to the DOM
+    $(".headline-section").append(sectionEl); // Add the new element to the DOM
+    $(sectionEl).append(headerEl); // Add the new element to the DOM
+    $(headerEl).append(h2El); // Add the new element to the DOM (headline)
+    $(headerEl).append(p3El); // Add the new element to the DOM (lead para)
 
-    // If the article has a headline, log and append to $articleList
-    var headline = article.headline;
-    var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-    if (headline && headline.main) 
-    {
-      $articleListItem.append(
-        "<span class='label label-primary'>"+"</span>"+"<strong>" + headline.main +"</strong>");
-    }
+    $(sectionEl).append(divEl); // Add the new element to the DOM
+    $(divEl).append(p1El); // Add the new element to the DOM (byline-author name)
+    $(divEl).append(p2El); // Add the new element to the DOM (publication date)    
 
-    // If the article has a byline, log and append to $articleList
-    var byline = article.byline;
-    if (byline && byline.original) 
-    {
-      $articleListItem.append("<h5>" + byline.original + "</h5>");
-    }
-
-    // Log lead paragraph, and append to document if exists
+    // assigning all variables
+    var headline = article.headline.main;
+    var byline = article.byline.original;
+    var webUrl= article.web_url;
     var leadPara = article.lead_paragraph;
+    var pubDate = article.pub_date.substring(0, 10); // showing only date, not time
 
-    if (leadPara) 
+    // If the article has a headline, log and append 
+    if (headline) 
     {
-      $articleListItem.append("<h5>" + leadPara + "</h5>");
+      h2El.text(headline);
     }
 
-    // Log published date, and append to document if exists
-    var pubDate = article.pub_date.substring(0, 10); // showing only date, not time
+    // If the article has a byline (author name), log and append     
+    if (byline) 
+    {       
+      p1El.text(byline);    
+      divEl.append("<a href='" + webUrl + "'>" + "Read full article" + "</a>");     
+    }
+
+    // Log lead paragraph, and append, if exists    
+    if (leadPara) 
+    {       
+      p3El.text(leadPara);
+    }
+
+    // Log published date, and append to document if exists    
     if (pubDate) 
     {
-      $articleListItem.append("<h5>" + "Published on: "+pubDate + "</h5>");
-    }
-
-    // Append and log url
-    $articleListItem.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
-
-    // Append the article
-    $articleList.append($articleListItem);
+      p2El.text("Published on: "+pubDate); 
+    }    
   }
 }
 
