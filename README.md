@@ -51,7 +51,7 @@ Tasks for developing this application:
 
 There are four contributors to this project. @devonte @faduma @houman @sheldon
 
-I have referred to w3schools.com for help with syntax for some functions and have referred to code and adapted from previous activities in module 6, specially NYT activity.
+We have referred to w3schools.com for help with syntax for some functions and have referred to code and adapted from previous activities in module 6, specially NYT activity.
 
 We have used the following APIs:
 - BallDontLie.io
