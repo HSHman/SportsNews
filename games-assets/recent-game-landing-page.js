@@ -11,7 +11,7 @@ $.ajax({
     var homeTeamScoreHP = document.querySelector('#home-team-scoreHP');
     var awayTeamScoreHP = document.querySelector('#away-team-scoreHP');
         
-    gameDateHP.textContent = data.data[44].date;
+    // gameDateHP.textContent = data.data[44].date;
     homeTeamHP.textContent = data.data[44].home_team.full_name;
     awayTeamHP.textContent = data.data[44].visitor_team.full_name;
     homeTeamScoreHP.textContent = data.data[44].home_team_score; 

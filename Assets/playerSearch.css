@@ -1,0 +1,115 @@
+
+
+
+/* Player Search Page */
+#players-list {
+    list-style: none;
+    
+}
+
+#players-list li:hover {
+cursor: pointer;
+color: #AECFE5;
+}
+
+.player-info {
+    display: flex;
+}
+
+.playerDetails {
+    line-height: 1;
+    display: flex;
+}
+
+#jerseyNumber {
+    font-size: 45px;
+    color: #be9d53;
+}
+
+#positionNames {
+    display: flex;
+}
+
+#teamNames {
+    margin: auto;
+    font-size: 14px;
+}
+
+#heightAndWeight {
+    font-size: 11px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+body {
+  background-color: #AECFE5;
+}
+
+.container {
+  width: 600px;
+  font: 14px/21px "Open Sans", Arial, sans-serif;
+  color: #666;
+  background-color: white;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 5px;
+  
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+
+.playerDetails {
+    display: flex;
+  padding: 20px;
+  background: #FDFCFA;
+  border-radius: 5px;
+  border: 1px solid #F2EEE6;
+  margin: 20px 0 30px;
+  position: relative;
+}
+
+/* Triangle in definition container */
+.playerDetails:after, .playerDetails:before {
+  bottom: 100%;
+  left: 6%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.playerDetails:after {
+    display: flex;
+  border-color: rgba(136, 183, 213, 0);
+  border-color: transparent;
+  border-bottom-color: #FDFCFA;
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.playerDetails:before {
+    display: flex;
+  border-color: rgba(194, 225, 245, 0);
+  border-color: transparent;
+  border-bottom-color: #F2EEE6;
+  border-width: 17px;
+  margin-left: -17px;
+}
+
+
+
+
+
+

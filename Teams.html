@@ -1,7 +1,6 @@
 
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,26 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/sn-icon.ico" >
     <link rel="stylesheet" href="assets/Teams-Style.css">
-    
+    <link rel="stylesheet" href="games-assets/layout.css">
+   
     <title>Sports News</title>
 </head>
-
-<body> 
+<body > 
     <!-- NAV -->
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu">
             <a class="pure-menu-heading" href="index.html"><img src="assets/images/SN_ICON.png" alt="" ></a>
-    
+
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="Teams.html" class="pure-menu-link">Teams</a></li>
                 <li class="pure-menu-item"><a href="playerSearch.html" class="pure-menu-link">Players</a></li>
-                <li class="pure-menu-item"><a href="#AboutUs" class="pure-menu-link">About Us</a></li>
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
             </ul>
         </div>
     </div>
     
-    <div>
+    <body>
+        <!-- Team Select Button -->
         <div class="content-container">
+
             <table class="pure-table content grid-row">   
                 <div class="table-container"> 
                     <td class="grid-col"><button><img src="Assets/Team_Icons/ATL_logo.svg" alt="team logo"><p>Atlanta Hawks</p></button></td>
@@ -74,43 +75,41 @@
                 </div>     
             </table>   
 
-            <div class="grid-row-1 " id="theResults" style="display:none;">
+            
+
+            <!--Game information placement-->
+            <div class="grid-row " id="theResults" style="display:none;">
                 <div class="grid-col-1">
                 <h2 id="team-name"></h2>
                 <div id="team-info">
             </div>
             <div class="inner-container">
-                <div class="grid-row-1">
-                    <p class="grid-col" id="recent-game">Latest Game</p>
-                    <p class="grid-col" id="game-date">Game Date</p>
+                <div class="grid-row">
+                    <h4 class="grid-col" id="recent-game">Latest Game:</h4>
+                    <h4 class="grid-col" id="game-date">Game Date</h4>
                 </div>
-                <div class="grid-row-1">
-                    <p class="grid-col" id="home-team-score">Home Score</p>
-                    <p class="grid-col" id="away-team-score">Away Score</p>
+                <div class="grid-row">
+                    <h4 class="grid-col" id="home-team-score">Home Score</h4>
+                    <h4 class="grid-col" id="away-team-score">Away Score</h4>
                 </div>
-                <div class="grid-row-1">
+                <div class="grid-row">
                     <div class="grid-col">
-                        <img id="homeTeam-image" width="70px;" >
+                        <img id="homeTeam-image" src="" width="70px;" >
                     </div>
                     <div class="grid-col">
-                        <img id="awayTeam-image" width="70px;" >
+                        <img id="awayTeam-image" src="" width="70px;" >
                     </div>
                 </div>
-                <div class="grid-row-1">
-                    <p class="grid-col" id="home-team"></p>
-                    <p class="grid-col" id="away-team"></p>
+                <div class="grid-row">
+                    <h4 class="grid-col" id="home-team"></h4>
+                    <h4 class="grid-col" id="away-team"></h4>
                 </div>
             </div>
-        </div>
-
-        <div class="footer l-box is-center">
-            © 2020 Sports News
-        </div>
-            
+        </div>        
+        
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="Assets/script-games.js"></script>
-            
+        <script src="Assets/script-games.js"></script> <!-- Js file for calling the game information -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </body>
 </html>
