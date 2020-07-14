@@ -1,6 +1,8 @@
-
-
-
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /*
  * -- BASE STYLES --
@@ -162,7 +164,7 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: #1f8dd6;
+    background: #9c1637;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -171,6 +173,7 @@ a.pure-button-primary {
     top: 0;
     left: 0;
     position: fixed !important;
+    
 }
 
 .splash {
@@ -182,14 +185,15 @@ a.pure-button-primary {
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
+    
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
     font-size: 20px;
     font-weight: bold;
-    color: white;
-    border: 3px solid white;
+    color: whitesmoke;
+    /* border: 0px solid whitesmoke; */
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
@@ -201,7 +205,6 @@ a.pure-button-primary {
     color: white;
     letter-spacing: 0.05em;
     opacity: 0.8;
-    font-weight: 400;
 }
 
 /*
@@ -317,7 +320,7 @@ a.pure-button-primary {
     }
 }
 
-/* Team Page (Toronto Raptors)*/
+/* Team Page */
 .grid-row {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -341,40 +344,207 @@ a.pure-button-primary {
 #awayTeam-image {
     justify-self: center;
 }
-#away-team {
+/* #away-team {
     margin-top: 30px;
     text-align: center;
     font-size: large;
-}
+} */
 #homeTeam-image {
     justify-self: center;
 }
-#home-team {
-    margin-top: 30px;
+/* #home-team {
     text-align: center;
     font-size: large;
-}
+} */
 #team-info {
-    margin-left: 5%;
+
     font-weight: bold;
 }
 
 
 
-
+ 
 /* TABLE */
-.pure-table td {
+.pure-table tr {
     padding: 0.5rem;
     color: #000;
     font-size: 11px;
-    border-left: 0px;
-display: inline-flex;
-
+    border-left: 0pxc #fff;
     
 
 }
 
 .pure-table td img { 
-    width: 45px;
+    width: 40px;
    
 }
+
+.pure-table td {
+    width: 15%;
+    height: 7rem;
+    border-left: 0px;
+    background-color:#9c1637;
+    margin: auto;
+    
+
+
+    
+
+}
+
+.pure-table button {
+    margin: auto;
+    /* display: inline-flex; */
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 0px;
+    height: 100%;
+    box-shadow: 1px 1px ;
+}
+
+.pure-table p {
+    text-align: center;
+
+    
+}
+
+
+.pure-table {
+   
+    border-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 5rem; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0px;
+    bottom: 5%;
+}
+
+
+
+/* TEAM RESULTS  */
+
+.logos {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.score {
+    font-size: 2rem; 
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+#team-name {
+    margin-top: 2%;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#the-results {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.team-results {
+    padding-top: 2%;
+    top: 100%;
+    
+}
+
+
+.team-results .inner-container{
+border: 1px solid #06090a;
+margin: 10%;
+margin-top: 2%;
+margin-bottom: 4%;
+padding-top: 2%;
+padding-right: 0%;
+padding-bottom: 2%;    
+}
+
+.sub-head {
+    margin-left: 10%;
+}
+
+.team-results h5 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(130, 130, 130);
+}
+
+.team-results .names h4 {
+    margin-bottom: 0;
+    margin-top: 0%;
+    text-align: center;
+    font-size: large;
+  
+}
+
+.teams-index h1 {
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+.teams-index .splash-head {
+    margin: 3rem auto;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+/* PLAYER SEARCH  */
+.search .splash-head {
+    margin: 3rem auto;
+    text-align: center;
+
+}
+
+.search .splash-head h1 {
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+.search .splash-head input {
+    font-size: 60%;
+    padding: 1% 2%;
+    width: 25%;
+}
+
+.search .splash-head button{
+    font-size: 60%;
+    padding: 1% 2%;
+}
+
+.playercontainer {
+    width: 100%;
+
+}
+
+.playercontainer .content-wrapper{
+    width: 100%;
+
+    text-align: center;
+    left: 0%;
+    padding-top: 2%;
+    top: 100%;
+    
+    
+}
+
+#players-list {
+    padding-left: 0px;
+}
+
+
+/* PLAYER SEARCH  */

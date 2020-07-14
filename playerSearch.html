@@ -33,30 +33,42 @@
         </ul>
     </div>
 </div>
-    <!-- Linking CSS file -->
-   
-
-<body>
-    <!-- Header -->
    
    
 
-    <!-- Container for results -->
-    <div class="container playercontainer">
-        <h1>Player Search</h1>
-        <div class="search" style="display: block;">
-
-            <!-- Search input and button -->
-            <input class="form-control" id="playerSearch" type="text" placeholder="Search by player">
-            <button type="submit" class="btn btn-primary btn-default" id="run-search">Search</button>
+    <body>
+       
+       
+       
+    
+        <!-- Container for results -->
+        <div class="container playercontainer">
             
+            <div class="splash-container search" style="display: block; height:100%;">
+                <div class="splash-head">
+                <h1>Player Search</h1>
+                <!-- Search input and button -->
+                <input class="form-control" id="playerSearch" type="text" placeholder="Search by player">
+                <button type="submit" class="btn btn-primary btn-default" id="run-search">Search</button>
+               </div> 
+            </div>
+            <!-- This will contain all the li's from the results -->
+            <div class="content-wrapper" id="player-results" style=" display:none;">
+       <div class="content">
+        <h2 class="is-center" id="team-name">Player Results</h2>      
+            <ul id="players-list">
+    
+            </ul>
+             
+              
+              </div>  
+            </div>
         </div>
-        <!-- This will contain all the li's from the results -->
-        <ul id="players-list">
 
-        </ul>
-    </div>
-
+  
+    
+            
+   
 
     <!-- Linking JS file -->
     <script src="Assets/playerSearch.js"></script>

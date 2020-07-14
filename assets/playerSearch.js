@@ -4,6 +4,16 @@ function buildQueryURL() {
   var player = $("#playerSearch").val().trim();
   var queryURL = "https://www.balldontlie.io/api/v1/players?search=" + player;
 
+
+  document.querySelector("#player-results").style.display = "block";
+
+
+    // ANCHOR 
+    $(function() {
+      $(document).scrollTop( $(".playercontainer").offset().top );  
+  });
+  // ANCHOR 
+  
   // Creates AJAX call for the specific name
 
   $.ajax({
