@@ -5,7 +5,7 @@
 
 ## Website URL
 
-This website can be found at: https:///
+This website can be found at: https://hshman.github.io/SportsNews/
 
 
 ## Installation
