@@ -27,14 +27,7 @@ function buildQueryURL() {
 
     for (var i = 0; i < response.data.length; i++) {
 
-      // Logging traversed JSON results
-
-      console.log(response.data[i].first_name)
-      console.log(response.data[i].last_name)
-      console.log(response.data[i].position)
-      console.log(response.data[i].team.full_name)
-      console.log(response.data[i].height_feet + "'" + response.data[0].height_inches)
-      console.log(response.data[i].weight_pounds)
+      
 
       // Creating list element
 
@@ -268,7 +261,7 @@ function buildQueryURL() {
 
       $(item).on('click', function () {
 
-        console.log("onclick")
+        
 
         $(this).next().slideToggle(150);
       });

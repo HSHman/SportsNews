@@ -1,3 +1,4 @@
+
 $("button").on("click", function() {
     var teamId = $("td button").index(this) + 1;
     var queryURLteam = "https://www.balldontlie.io/api/v1/teams/" + teamId;
@@ -7,7 +8,7 @@ $("button").on("click", function() {
     $(function() {
         $(document).scrollTop( $(".team-results").offset().top );  
     });
-    // ANCHOR 
+    // ANCHORs 
     
     
     document.querySelector(".team-results").style.display = "block";
@@ -22,7 +23,10 @@ $("button").on("click", function() {
     var teamInfo = document.querySelector('#team-info');
     var teamName = document.getElementById('team-name')
     
-   
+    console.log(data);
+    console.log(data.city);
+    console.log(data.conference);
+    console.log(data.division);
     
     teamName.textContent = data.name;
     teamInfo.textContent = data.city + ' - ' + data.conference + ' - ' + data.division;
@@ -72,14 +76,37 @@ $.ajax({
     var year = rawDate.substring(0, 4);
     var month = rawDate.substring(5, 7);
     var day = rawDate.substring(8, 10);
+    // var theMonths = "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec".split('');
     
+    // if (month.charAt(0) = "0") {
+    // month = month.charAt(1)
+    // console.log(month)
+    // }
 
     trimDate = month + " "+ day + " " + year;
     console.log(trimDate);
     
     
     
-   
+    
+    // gameDate.textContent = "";
+    
+    
+    
+    
+    // X6 Previous Games (Date,Teams,Score)
+    //Game 1
+    // var previousGameOneDate = document.querySelector('#previous-game1-date');
+    // var previousGameOneAwayTeam = document.querySelector('#previous-game1-away-team');
+    // var previousGameOneHomeTeam = document.querySelector('#previous-game1-home-team');
+    // var previousGameOneAwayScore = document.querySelector('#previous-game1-away-score');
+    // var previousGameOneHomeScore = document.querySelector('#previous-game1-home-score');
+
+    // previousGameOneDate.textContent = data.data[12].date;
+    // previousGameOneAwayTeam.textContent = data.data[12].visitor_team.abbreviation;
+    // previousGameOneHomeTeam.textContent = data.data[12].home_team.abbreviation;
+    // previousGameOneAwayScore.textContent = data.data[12].visitor_team_score;
+    // previousGameOneHomeScore.textContent = data.data[12].home_team_score;
 
     var haLower = homeAbbreviation.toLowerCase();
     var queryURLstats = "https://nba-players.herokuapp.com/players-stats-teams/" + haLower;
@@ -97,7 +124,12 @@ $.ajax({
     
     console.log(response)
     for (var i = 0; i < response.length; i++) {
-       
+        console.log(response[i].name);
+        console.log(response[i].assists_per_game);
+        console.log(response[i].blocks_per_game);
+        console.log(response[i].games_played);
+        console.log(response[i].rebounds_per_game);
+        console.log(response[i].three_point_percentage);
 
         var playerStats = {playerName : response[i].name,
             gamesPlayed : response[i].games_played,
@@ -111,7 +143,7 @@ $.ajax({
 
         var playerContainer = $("player-container").append("<div></div").addClass( "grid-row player");
        playerContainer;
-      
+       console.log(playerStats);
 
 
     
